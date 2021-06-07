@@ -1,8 +1,8 @@
 # GSM Remote Alarm System
-_GSM Remote Alarm System_ is an experimental implementation of a broader idea of how I can build a home alarm system.
-This repository shows my attempts to remotely control an alarm system using [SIM800L][sim800lref] GSM module that is connected to [ESP32][esp32ref] microcontroller. My challenge was particularly on the programming side which how to communicate and control the GSM module to send/receive SMS messages, and then using those messages in order to activate alarm mode or even control external devices such as a relay.  
+_GSM Remote Alarm System_ is an experimental implementation of a broader idea of how one can build a home alarm system.
+This repository shows my attempts to remotely control an alarm system using [SIM800L][sim800lref] GSM module that is connected to a [ESP32][esp32ref] microcontroller. My challenge was, particularly on the code side, on how to communicate and control the GSM module to send/receive SMS messages, and then using those messages in order to activate alarm mode or even control external devices such as a relay.  
 
-If you are interested in home automation and security, no doubt that open source [Home assistant](https://www.home-assistant.io/) running on Raspberry Pi is a better approach to follow, and this repository only for educational purpose.
+If you are interested in home automation and security, no doubt that the open source [Home assistant](https://www.home-assistant.io/), running on Raspberry Pi, is a better approach to follow, and this repository is only for educational purpose.
 
 <!-- ![image](docs/esp32_remote_alarm.JPG) -->
 <img src="docs/esp32_remote_alarm.JPG" alt="drawing" width="600"/>
@@ -16,20 +16,20 @@ If you are interested in home automation and security, no doubt that open source
     - Turn on the yellow LED
     - Buzzing every 10 seconds
 - Arm/Disarm SMS command 
-- Push-button on/off SMS command
+- Push-button "ON"/"OFF" SMS command
 - Display messages on a 0.96 inch OLED display
 
 
-## What it does?
-This module can be set in alarm mode by receiving an SMS command (e.g. "ALARM"). Also can reply an arm and disarm SMS command to the predefined contact number by pressing a push-button for 5 and 10 seconds respectively. 
+## What does it?
+This module can be set in alarm mode by receiving an SMS command (e.g. "ALARM"). Also can reply an "ON" and "OFF" SMS command to the predefined contact number by pressing a push-button for 5 and 10 seconds, respectively. 
 
 
 ## Prerequisites
 - Hardware:
     - [EPS32][esp32ref] microcontroller
     - [SIM800L][sim800lref] GSM Module
-    - OLED Display [SSD1306](https://randomnerdtutorials.com/esp32-ssd1306-oled-display-arduino-ide/) 128x64
-    - [LM2596S][lm2596sref] DC-DC Power Supply Step Down Module
+    - OLED display [SSD1306](https://randomnerdtutorials.com/esp32-ssd1306-oled-display-arduino-ide/) 128x64
+    - [LM2596S][lm2596sref] DC-DC power supply step down module
     - Two red and yellow LEDs
     - A Piezo buzzer
     - Two 100 Ohm resistors for LEDs
@@ -55,7 +55,7 @@ The wiring ESP32 is as follows:
 - Buzzer pin ➡ G15
 - Push button ➡ G2
 
-**Important:** A large electrolytic capacitor (470 or 1000 uF) is certainly required in order to stabilize the GSM module with its current spike. Connect it to the `GND` and `VCC` pins and as close as possible to the module.
+**Important:** A large electrolytic capacitor (470 or 1000 uF) is certainly required in order to stabilize the GSM module with its current spike. It should be connected to the `GND` and `VCC` pins and as close as possible to the module.
 
 
 ## Code adjustment
