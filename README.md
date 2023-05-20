@@ -1,8 +1,7 @@
 # GSM Remote Alarm System
-_GSM Remote Alarm System_ is an experimental implementation of a broader idea of how one can build a home alarm system.
-This repository shows my attempts to remotely control an alarm system using [SIM800L][sim800lref] GSM module that is connected to a [ESP32][esp32ref] microcontroller. My challenge was, particularly on the code side, on how to communicate and control the GSM module to send/receive SMS messages, and then using those messages in order to activate alarm mode or even control external devices such as a relay.  
+The "_GSM Remote Alarm System_" is an experimental implementation that explores the concept of constructing a home alarm system. This repository showcases my endeavors in remotely managing an alarm system utilizing the [SIM800L][sim800lref] GSM module connected to an [ESP32][esp32ref] microcontroller. The main challenge I encountered was establishing effective communication and control between the GSM module and the microcontroller, enabling the transmission and reception of SMS messages. These messages were utilized to activate the alarm mode and even control external devices such as a relay.
 
-If you are interested in home automation and security, no doubt that the open source [Home assistant](https://www.home-assistant.io/), running on Raspberry Pi, is a better approach to follow, and this repository is only for educational purpose.
+For individuals interested in home automation and security, it is worth noting that the open-source [Home Assistant](https://www.home-assistant.io/), running on a Raspberry Pi, offers a more comprehensive approach to pursue. This repository is primarily intended for educational purposes.
 
 <!-- ![image](docs/esp32_remote_alarm.JPG) -->
 <img src="docs/esp32_remote_alarm.JPG" alt="drawing" width="600"/>
